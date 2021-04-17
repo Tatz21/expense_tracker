@@ -25,6 +25,10 @@ class Transaction {
      this._color,
 
   );
+
+  Map<String, Object> toMap() {}
+
+  static Future<Transaction> fromMap(Map first) {}
 }
 
 class Transactions with ChangeNotifier {

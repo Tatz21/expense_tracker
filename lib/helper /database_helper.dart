@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart';
@@ -67,16 +65,17 @@ static Database _database;
     }
     return null;
   }
-   Future<List<txn.Transaction>> getAllTransactions() async {
+  Future<List<txn.Transaction>> getAllTransactions() async {
     Database db = await database;
     List<Map> res = await db.query(tableTransactions,
-        columns: [columnId, columnTitle, columnValue]);
+        columns: [columnId, columnTitle, columnValue);
 
     List<txn.Transaction> list =
         res.map((e) => txn.Transaction.fromMap(e)).toList();
 
     return list;
   }
+
   Future<int> deleteTransactionById(int id) async {
     Database db = await database;
     int res =
@@ -90,5 +89,5 @@ static Database _database;
     return res;
   }
 
-
+  // TODO: update(txn.Transaction element)
 }
