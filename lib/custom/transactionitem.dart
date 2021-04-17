@@ -15,18 +15,18 @@ class TransactionItem extends StatelessWidget {
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-            color: transaction.color.withOpacity(.8),
+            color: transaction.txnColor.withOpacity(.8),
             borderRadius: BorderRadius.circular(12),
           ),
           alignment: Alignment.center,
           child: Icon(
-            transaction.iconData,
+            transaction.txnIcon,
             size: 20,
             color: Colors.white,
           ),
         ),
         title: Text(
-          transaction.title,
+          transaction.txnTitle,
           style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         ),
       ),

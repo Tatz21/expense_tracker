@@ -1,8 +1,10 @@
+import 'package:expense/Pages/Reports.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 import './expensechart.dart';
 import '../model/expense.dart';
+
 
 class Header extends StatelessWidget {
   final Function addTransaction;
@@ -18,7 +20,7 @@ class Header extends StatelessWidget {
             charts.ColorUtil.fromDartColor(expense.color),
         data: [
           Expense('Busniss', 148.99, Color(0xff313131)),
-          Expense('Meals', 123.99, Color(0xffEEEEE)),
+          Expense('Meals', 123.99, Color(0xff228B22)),
           Expense('Gifts', 48.99, Color(0xfff6d743)),
           Expense('Gaming', 28.99, Color(0xffd57b51)),
           Expense('Travel', 88.99, Color(0xfffe91ca)),
@@ -79,7 +81,10 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => Reports()));
+                  },
                   color: Colors.black,
                   child: Container(
                     width: 72,

@@ -4,17 +4,17 @@ import 'package:provider/provider.dart';
 import './transactionitem.dart';
 import '../providers/transactions.dart';
 
-class TranscationCard extends StatefulWidget {
+class TransactionCard extends StatefulWidget {
   final double height;
 
-  const TranscationCard(this.height);
+  const TransactionCard(this.height);
 
   @override
-  _TranscationCardState createState() => _TranscationCardState();
+  _TransactionCardState createState() => _TransactionCardState();
 }
 
-class _TranscationCardState extends State<TranscationCard> {
-  int _date = 16;
+class _TransactionCardState extends State<TransactionCard> {
+  int _date = 12;
 
   @override
   Widget build(BuildContext context) {

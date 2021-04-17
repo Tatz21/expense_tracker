@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
 
 class Transaction {
-  final int id;
-  final String title;
-  final double value;
-  final String category;
-  final IconData iconData;
-  final Color color;
+  String _id;
+  String _title;
+  double _value;
+  String _category;
+  IconData _iconData;
+  Color _color;
 
-  const Transaction({
-    @required this.id,
-    @required this.title,
-    @required this.value,
-    @required this.category,
-    @required this.iconData,
-    @required this.color,
-  });
+  String get txnId => _id;
+  String get txnTitle => _title;
+  double get txnAmount => _value;
+  IconData get txnIcon => _iconData;
+  String get txncategory =>_category;
+  get txnColor => _color;
+  
+
+  Transaction(
+     this._id,
+     this._title,
+     this._value,
+     this._category,
+     this._iconData,
+     this._color,
+
+  );
 }
 
 class Transactions with ChangeNotifier {
@@ -24,3 +33,5 @@ class Transactions with ChangeNotifier {
     return _transactions;
   }
 }
+
+
