@@ -1,5 +1,7 @@
+import 'package:expense/Pages/Rootpage.dart';
 import 'package:flutter/material.dart';
-import '../homepage.dart';
+import '../pages/Rootpage.dart';
+
 
 class MyAccount extends StatefulWidget {
   @override
@@ -30,8 +32,7 @@ with SingleTickerProviderStateMixin{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                           IconButton(icon:Icon(Icons.arrow_back_ios), onPressed: (){
-                            Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => HomePage()));
+                            
                           }),
                             Padding(
                               padding: EdgeInsets.only(left: 25.0,top: 14.0),
